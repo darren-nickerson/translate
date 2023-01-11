@@ -1,0 +1,97 @@
+@tailwind base;
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  -webkit-tap-highlight-color: transparent; /* remove tap highlight */
+}
+body :focus {
+  outline: none; /* remove outline */
+  box-shadow: none; /* remove box shadow */
+}
+@tailwind components;
+
+@tailwind utilities;
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: blue;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 4px;
+}
+
+*::-webkit-scrollbar-track {
+  background: primary;
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #46a1eb;
+}
+
+@layer base {
+  body {
+    @apply font-abc;
+    @apply bg-primary;
+  }
+}
+
+.dark {
+  --color-bg-primary: #15202b;
+  --color-bg-secondary: #192734;
+  --color-text-secondary: #8899a6;
+  --color-text-primary: white;
+  --color-bg-select: #192734;
+  --color-text-select: #ffffff;
+}
+
+.light {
+  --color-bg-primary: #edf2f7;
+  --color-bg-secondary: #ffffff;
+  --color-bg-select: #ffffff;
+  --color-text-primary: #0e1624;
+  --color-text-select: #192734;
+}
+
+.react-select__control {
+  background: var(--color-bg-select) !important;
+}
+
+
+.react-select__single-value:active {
+  background: var(--color-bg-select) !important;
+}
+
+.react-select__menu {
+  background: var(--color-bg-select) !important;
+  color: var(--color-text-select) !important;
+}
+
+.react-select__single-value {
+  color: var(--color-text-select) !important;
+}
+
+.react-select__input-container {
+  color: var(--color-text-select) !important;
+}
+
+
+.react-select__option:hover {
+  background-color: #46a1eb !important;
+  color: white !important;
+}
+
+
+.react-select__option:hover {
+  background-color: #46a1eb !important;
+  color: white !important;
+}
+
+.react-select__option:active {
+  background-color: #46a1eb !important;
+  color: white !important;
+}
